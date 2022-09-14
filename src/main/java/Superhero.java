@@ -1,6 +1,6 @@
 
 public class Superhero {
-    private String createdheroName;
+    private String superheroName;
     private double superheroHeight;
     private String superheroPower;
     private String superheroWeakness;
@@ -8,7 +8,7 @@ public class Superhero {
 
     //Konstruktør
     public Superhero(String superheroName, double superheroHeight, String superheroPower, String superheroWeakness, boolean superheroHumanOrNot) {
-        this.createdheroName = superheroName;
+        this.superheroName = superheroName;
         this.superheroHeight = superheroHeight;
         this.superheroPower = superheroPower;
         this.superheroWeakness = superheroWeakness;
@@ -16,11 +16,11 @@ public class Superhero {
     }
 
 
-    /*
+
     //get methods
 
-    public String getCreatedheroName() {
-        return createdheroName;
+    public String getSuperheroName() {
+        return superheroName;
     }
 
     public double getSuperheroHeight() {
@@ -41,8 +41,8 @@ public class Superhero {
 
 
     //set methods
-    public void setCreatedheroName(String createdheroName) {
-        this.createdheroName = createdheroName;
+    public void setSuperheroName(String superheroName) {
+        this.superheroName = superheroName;
     }
 
     public void setSuperheroHeight(double superheroHeight) {
