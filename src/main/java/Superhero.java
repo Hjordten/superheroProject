@@ -62,33 +62,6 @@ public class Superhero {
         return superheroHumanOrNot;
     }
 
-
-
-/*
-    public class createHero {
-        String heroName = getsuperheroName();
-        double heroHeight = getSuperheroHeight();
-        String heroPower = getSuperheroPower();
-        String heroWeakness = getSuperheroWeakness();
-        boolean heroHumanOrNot = getSuperheroHumanOrNot();
-
-    }
-*/
-    /*
-    public static class classCreateHero {
-        private String superheroName;
-        public String SuperheroName = superheroName;
-
-        public void createHero() {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Tid til at lave din superhelt!");
-            System.out.println("Hvad hedder din helt?");
-            this.SuperheroName = sc.next();
-            System.out.println(superheroName);
-
-
-        }
-*/
 }
 
 
