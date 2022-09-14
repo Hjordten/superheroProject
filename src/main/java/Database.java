@@ -72,15 +72,25 @@ public class Database {
         System.out.println("You have added: " + "" + superheroName + " " + "To the databse");
 
 
-
     }
-/*
-    public void searchHero(String seachName) {
+
+    public void searchHero(String searchName) {
         boolean find = false;
-        for (Superhero )
+        for (Superhero hero : superheroesDatabase) {
+            System.out.println("Superhero name is: " + hero.getSuperheroName());
+            System.out.println("Superhero height is: " + hero.getSuperheroHeight());
+            System.out.println("Superhero power(s) is: " + hero.getSuperheroPower());
+            System.out.println("Superhero weakness(s) is: " + hero.getSuperheroWeakness());
+            System.out.println("Superhero origin from planet earth is: " + hero.getSuperheroHumanOrNot());
+
+            find = true;
+        }
+        if (!find) {
+            System.out.println("There are no match(es) while searching for: " + searchName);
+        }
 
 
     }
-*/
-    }
+
+}
 

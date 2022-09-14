@@ -11,9 +11,9 @@ public class Main {
         do {
             System.out.println("""
                     Welcome to the superhero database
-                    1. create superhero.
-                    2. Show superheroes.
-                    3. Find superhero.
+                    1. create superhero(es).
+                    2. Find Superhero(es).
+                    3. Show database of heroes.
                     9. Exit
                     """);
             int mainMenuChoise = 0;
@@ -22,7 +22,9 @@ public class Main {
                         database.addHeroToDatabase();
                         break;
                     case 2:
-                        System.out.println("test");
+                        System.out.println("Search the name of a desired superhero by typing its name: ");
+                        String searchName = sc.nextLine();
+                        database.searchHero(searchName);
                         break;
                     default:
                         System.out.println("test");
