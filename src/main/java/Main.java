@@ -5,7 +5,9 @@ public class Main {
 
         Database database = new Database();
         Scanner sc = new Scanner(System.in);
-
+        int mainMenuChoise = 0;
+        int optionsMenu = 0;
+        do {
             System.out.println("""
                     Welcome to the superhero database
                     1. create superhero(es).
@@ -13,25 +15,28 @@ public class Main {
                     3. Show database of heroes.
                     9. Exit
                     """);
-            int mainMenuChoise = Integer.parseInt(sc.next());
+            mainMenuChoise = sc.nextInt();
+            //int optionsMenu = 0;
             switch (mainMenuChoise) {
+
                 case 1:
                     database.addHeroToDatabase();
                     break;
                 case 2:
-                    System.out.println("Search the name of a desired superhero by typing its name: ");
-                    String searchName = sc.nextLine();
-                    database.searchHero(searchName);
+                    database.searchDatabase();
+                    //database.searchDatabseIfElse();
+                    break;
                 case 3:
-                    database.showDatabse();
+                    for(Superhero hero : database.getSuperheroesDatabase())
+                        System.out.println(hero);
                     break;
                 default:
-                    System.out.println("Wrong input");
+                    System.out.println("Could not resolve input");
                     break;
             }
+        }while (mainMenuChoise != 9);
         }
     }
-
 
 
 //superheroDatabase.createHero(createdHeroName, createdHeroHeight, createdHeroPower, createdHeroWeakness, createdHeroHumanOrNot);

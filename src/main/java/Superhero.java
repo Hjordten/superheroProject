@@ -1,10 +1,11 @@
-
+import java.util.Scanner;
 public class Superhero {
     private String superheroName;
     private double superheroHeight;
     private String superheroPower;
     private String superheroWeakness;
     private boolean superheroHumanOrNot;
+
 
     //Konstruktør
     public Superhero(String superheroName, double superheroHeight, String superheroPower, String superheroWeakness, boolean superheroHumanOrNot) {
@@ -13,6 +14,15 @@ public class Superhero {
         this.superheroPower = superheroPower;
         this.superheroWeakness = superheroWeakness;
         this.superheroHumanOrNot = superheroHumanOrNot;
+    }
+
+    public String toString() {
+        return "\nSuperhero name: " + superheroName +
+                "\nSuperhro height: " + superheroHeight +
+                "\nSuperhero power(s): " + superheroPower +
+                "\nSuperhero weakness(s): " + superheroWeakness +
+                "\nSuperhero origin from planet earth: " + superheroHumanOrNot;
+
     }
 
 
