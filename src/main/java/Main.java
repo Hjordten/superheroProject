@@ -24,7 +24,6 @@ public class Main {
                     break;
                 case 2:
                     database.searchDatabase();
-                    //database.searchDatabseIfElse();
                     break;
                 case 3:
                     for(Superhero hero : database.getSuperheroesDatabase())

@@ -29,6 +29,7 @@ public class Database {
         System.out.println(superheroesDatabase.get(0));
     }
 
+
     public void addHeroToDatabase() {
         sc = new Scanner(System.in);
         System.out.println("Time to add a new hero");
@@ -97,17 +98,12 @@ public class Database {
         if (!searchResults.isEmpty())
             for (Superhero nameSearch : searchResults)
                 System.out.println(nameSearch);
+
         else
             System.out.println("No matches with the following search: " + "\"" + searchName + "\"");
 
-
-    /*
-    public void searchDatabseIfElse (){
-        String nameSearch = sc.nextLine();
-        superheroesDatabase.contains(nameSearch);
-        System.out.println(nameSearch);
-    }
-    */
-
+        for (int i = 0; i < searchResults.size(); i++) {
+            System.out.println(i + 1 + ":" + searchResults.get(i));
+        }
     }
 }
