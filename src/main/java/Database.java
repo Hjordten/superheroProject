@@ -33,25 +33,23 @@ public class Database {
     public void addHeroToDatabase() {
         sc = new Scanner(System.in);
         System.out.println("Time to add a new hero");
+        System.out.println("");
 
         System.out.println("Write the name of the superhero: ");
         String superheroName = sc.nextLine();
+        System.out.println("");
 
-        System.out.println("""
-                Write the height of the hero:
-                please use .(perod) to seperate period numbers to avoid error.
-                """);
+        System.out.println("Write the height of the superhero : \nPlease use , (comme) to seperate period");
         double superheroHeight = sc.nextDouble();
+        System.out.println("");
 
-        System.out.println("""
-                Write the power(s) of the hero:
-                """);
+        System.out.println("Write the power(s) of the superhero: ");
         String superheroPower = sc.next();
+        System.out.println("");
 
-        System.out.println("""
-                Write the weakness(s) of the superhero:
-                """);
+        System.out.println("Write the weakness(s) of the superhero");
         String superheroWeakness = sc.next();
+        System.out.println("");
 
         System.out.println("""
                 write if the superhero origin is from planet earth?
@@ -73,10 +71,12 @@ public class Database {
                 System.out.println("Wrong input. Please type again");
         }
 
+        System.out.println("");
         sc.nextLine();
 
         addToDatabase(superheroName, superheroHeight, superheroPower, superheroWeakness, superheroHumanOrNot);
         System.out.println("You have added: " + "" + superheroName + " " + "To the database");
+        System.out.println("");
 
 
     }
