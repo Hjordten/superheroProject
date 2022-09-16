@@ -51,11 +51,7 @@ public class Database {
         String superheroWeakness = sc.next();
         System.out.println("");
 
-        System.out.println("""
-                write if the superhero origin is from planet earth?
-                Please write 1 if he/she is from planet earth.
-                Please write 2 if he/she is not from planet earth.              
-                """);
+        System.out.println("Write if the superhero origin is from planet earth. \nPlease write 1 if he/she is from earth and press ENTER. \nPlease write 2 if he/she is not from planet earth and press ENTER");
         boolean superheroHumanOrNot = true;
         int userChoice = (sc.nextInt());
         switch (userChoice) {
@@ -81,6 +77,7 @@ public class Database {
 
     }
 
+    ArrayList<Superhero> searchResults = new ArrayList<Superhero>();
 
     public void searchDatabase() {
 
@@ -88,10 +85,9 @@ public class Database {
         Scanner sc = new Scanner(System.in);
         String searchName = sc.nextLine();
 
-        ArrayList<Superhero> searchResults = new ArrayList<Superhero>();
 
         for (Superhero nameSearch : superheroesDatabase) {
-            if (nameSearch.getSuperheroName().contains(searchName)) {
+            if (nameSearch.getSuperheroName().equalsIgnoreCase(searchName)) {
                 searchResults.add(nameSearch);
             }
         }
@@ -102,8 +98,22 @@ public class Database {
         else
             System.out.println("No matches with the following search: " + "\"" + searchName + "\"");
 
-        for (int i = 0; i < searchResults.size(); i++) {
-            System.out.println(i + 1 + ":" + searchResults.get(i));
+    }
+
+    public void showSearchResults() {
+        Database database = new Database();
+        if (!searchResults.isEmpty())
+            for (int i = 0; i < searchResults.size(); i++) {
+                System.out.println(i + 1 + ":" + searchResults.get(i));
+            }
+        else
+            System.out.println("You have not made any searches yet.");
+
+    }
+
+    public void editSuperheroes(){
+        for(int i = 0; i<superheroesDatabase.size(); i++) {
+            System.out.println(i++ + ":" + superheroesDatabase.get(i));
         }
     }
 }
