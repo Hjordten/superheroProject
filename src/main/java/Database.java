@@ -92,9 +92,10 @@ public class Database {
             }
         }
         if (!searchResults.isEmpty())
-            for (Superhero nameSearch : searchResults)
+            for (Superhero nameSearch : searchResults) {
+                System.out.println("");
                 System.out.println(nameSearch);
-
+            }
         else
             System.out.println("No matches with the following search: " + "\"" + searchName + "\"");
 
@@ -104,6 +105,7 @@ public class Database {
         Database database = new Database();
         if (!searchResults.isEmpty())
             for (int i = 0; i < searchResults.size(); i++) {
+                System.out.println("");
                 System.out.println(i + 1 + ":" + searchResults.get(i));
             }
         else
@@ -111,9 +113,25 @@ public class Database {
 
     }
 
-    public void editSuperheroes(){
-        for(int i = 0; i<superheroesDatabase.size(); i++) {
-            System.out.println(i++ + ":" + superheroesDatabase.get(i));
+    public void editSuperheroes() {
+        for (int i = 0; i < superheroesDatabase.size(); i++) {
+            System.out.println(i+1 + ":" + superheroesDatabase.get(i));
         }
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of which superhero you wanna edit: ");
+        int number = sc.nextInt();
+        sc.nextLine();
+
+        Superhero editSuperhero = superheroesDatabase.get(number - 1);
+        System.out.println("Adjusting following superhero " + editSuperhero);
+
+        System.out.println("Edit data and press ENTER. If you do not wish to edit any data press ENTER");
+        System.out.println("Superhero name " + editSuperhero.getSuperheroName());
+        String superheroNewName = sc.nextLine();
+        if (!superheroNewName.isEmpty())
+            editSuperhero.setSuperheroName(superheroNewName);
+
+
     }
+
 }

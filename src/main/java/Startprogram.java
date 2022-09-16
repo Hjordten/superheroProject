@@ -14,12 +14,12 @@ public class Startprogram {
                     2. Find Superhero(es).
                     3. Show database of heroes.
                     4. Show searched results.
+                    5. Edit superheroes.
                     9. Exit
                     """);
             mainMenuChoise = sc.nextInt();
             //int optionsMenu = 0;
             switch (mainMenuChoise) {
-
                 case 1:
                     database.addHeroToDatabase();
                     break;
