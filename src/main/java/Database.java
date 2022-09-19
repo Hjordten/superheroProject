@@ -44,16 +44,21 @@ public class Database {
         String superheroHeight = "";
         do {
             System.out.println("Write the height of the superhero and what value you want it to be");
-            String inputString = sc.nextLine();
-        } while (superheroHeight == "");
+            superheroHeight = sc.nextLine();
+        } while (superheroHeight.isEmpty());
 
-        System.out.println("Write the power(s) of the superhero: ");
-        String superheroPower = sc.next();
-        System.out.println("");
+        String superheroPower = "";
+        do {
+            System.out.println("Write the power(s) of the superhero: ");
+            superheroPower = sc.nextLine();
+        } while (superheroPower.isEmpty());
 
-        System.out.println("Write the weakness(s) of the superhero");
-        String superheroWeakness = sc.next();
-        System.out.println("");
+        String superheroWeakness = "";
+        do {
+            System.out.println("Write the weakness(s) of the superhero");
+            superheroWeakness = sc.nextLine();
+        } while (superheroWeakness.isEmpty());
+
 
         System.out.println("Write if the superhero origin is from planet earth. \nPlease write 1 if he/she is from earth and press ENTER. \nPlease write 2 if he/she is not from planet earth and press ENTER");
         boolean superheroHumanOrNot = true;

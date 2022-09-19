@@ -12,7 +12,7 @@ public class Startprogram {
                     1. create superhero(es).
                     2. Find Superhero(es).
                     3. Show database of heroes.
-                    4. Show searched results.
+                    4. Show previous searches
                     5. Edit superheroes.
                     9. Exit
                     """);
