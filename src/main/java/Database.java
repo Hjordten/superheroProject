@@ -64,7 +64,7 @@ public class Database {
                 System.out.println("You have declared the superheroes origin as: not from planet earth");
                 break;
             default:
-                System.out.println("Wrong input. Please type again");
+                System.out.println("Wrong input. Origin og the new hero has been sat to: From planet earth\nPlease use 'Edit superheroes' if you wish to change it.");
         }
 
         System.out.println("");
@@ -115,22 +115,59 @@ public class Database {
 
     public void editSuperheroes() {
         for (int i = 0; i < superheroesDatabase.size(); i++) {
-            System.out.println(i+1 + ":" + superheroesDatabase.get(i));
+            System.out.println(i + 1 + ":" + superheroesDatabase.get(i));
         }
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of which superhero you wanna edit: ");
         int number = sc.nextInt();
         sc.nextLine();
+        System.out.println("Enter the number of which superhero you wanna edit: ");
 
         Superhero editSuperhero = superheroesDatabase.get(number - 1);
         System.out.println("Adjusting following superhero " + editSuperhero);
 
         System.out.println("Edit data and press ENTER. If you do not wish to edit any data press ENTER");
-        System.out.println("Superhero name " + editSuperhero.getSuperheroName());
+        System.out.println("Currently editing superhero name: " + editSuperhero.getSuperheroName());
         String superheroNewName = sc.nextLine();
         if (!superheroNewName.isEmpty())
             editSuperhero.setSuperheroName(superheroNewName);
 
+        System.out.println("Edit data and press ENTER. If you do not wish to edi any data press ENTER");
+        System.out.println("Currently editing superhero height: " + editSuperhero.getSuperheroHeight());
+        String superheroNewHeight = sc.nextLine();
+        if (!superheroNewHeight.isEmpty())
+        {
+            editSuperhero.setSuperheroHeight(Double.parseDouble(superheroNewHeight));
+        }
+        else
+        {
+            editSuperhero.setSuperheroPower(editSuperhero.getSuperheroPower());
+        }
+
+        System.out.println("Edit data and press ENTER. If you do not wish to edit any data press ENTER");
+        System.out.println("Corrently editing superhero powers: " + editSuperhero.getSuperheroPower());
+        String superheroNewPower = sc.nextLine();
+        if (!superheroNewPower.isEmpty());
+        editSuperhero.setSuperheroPower(superheroNewPower);
+
+        System.out.println("Edit data and press ENTER. If you do not wish to edit any data press ENTER");
+        System.out.println("Currently editing superhero weakness(s): " + editSuperhero.getSuperheroWeakness());
+        String superheroNewWeakness = sc.nextLine();
+        if (!superheroNewWeakness.isEmpty());
+        editSuperhero.setSuperheroWeakness(superheroNewWeakness);
+
+        System.out.println("Edit data and press ENTER. If you do not wish to edit any data press ENTER");
+        System.out.println("Currently editing superhero origin. \nPress 1 and press ENTER if origin is from earth. \nPress 2 and ENTER if origin is not from earth.");
+        String superheroNewOrigin = sc.nextLine();
+        if (superheroNewOrigin == "1") {
+            editSuperhero.setSuperheroHumanOrNot(true);
+        }
+        else if (superheroNewOrigin == "2")
+        {
+            editSuperhero.setSuperheroHumanOrNot(false);
+        }
+        {
+            System.out.println("");
+        }
 
     }
 
