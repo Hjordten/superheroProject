@@ -35,13 +35,17 @@ public class Database {
         System.out.println("Time to add a new hero");
         System.out.println("");
 
-        System.out.println("Write the name of the superhero: ");
-        String superheroName = sc.nextLine();
-        System.out.println("");
+        String superheroName = "";
+        do {
+            System.out.println("Write the name of the sueprhero");
+            superheroName = sc.nextLine();
+        } while(superheroName.isEmpty());
 
-        System.out.println("Write the height of the superhero and what value you want it to be");
-        String superheroHeight = sc.nextLine();
-        System.out.println("");
+        String superheroHeight = "";
+        do {
+            System.out.println("Write the height of the superhero and what value you want it to be");
+            String inputString = sc.nextLine();
+        } while (superheroHeight == "");
 
         System.out.println("Write the power(s) of the superhero: ");
         String superheroPower = sc.next();
