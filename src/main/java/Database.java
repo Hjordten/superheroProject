@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Database {
 
-    Superhero hero1 = new Superhero("Superman", 1.79, "Heat Vision", "Cryptonite", true);
-    Superhero hero2 = new Superhero("Flash", 1.60, "Superspeed", "Cold", true);
-    Superhero hero3 = new Superhero("Martian Manhunter", 1.90, "Transformation", "fire", false);
-    Superhero hero4 = new Superhero("Flash", 1.60, "Superspeed", "Cold", true);
+    Superhero hero1 = new Superhero("Superman", "1.79", "Heat Vision", "Cryptonite", true);
+    Superhero hero2 = new Superhero("Flash", "1.60", "Superspeed", "Cold", true);
+    Superhero hero3 = new Superhero("Martian Manhunter", "1.90", "Transformation", "fire", false);
+    Superhero hero4 = new Superhero("Flash", "1.60", "Superspeed", "Cold", true);
 
     ArrayList<Superhero> superheroesDatabase = new ArrayList<>(List.of(hero1, hero2, hero3, hero4));
 
@@ -21,7 +21,7 @@ public class Database {
         return superheroesDatabase;
     }
 
-    public void addToDatabase(String superHeroName, double superheroHeight, String superheroPower, String superheroWeakness, boolean humanOrNot) {
+    public void addToDatabase(String superHeroName, String superheroHeight, String superheroPower, String superheroWeakness, boolean humanOrNot) {
         superheroesDatabase.add(new Superhero(superHeroName, superheroHeight, superheroPower, superheroWeakness, humanOrNot));
     }
 
@@ -39,8 +39,8 @@ public class Database {
         String superheroName = sc.nextLine();
         System.out.println("");
 
-        System.out.println("Write the height of the superhero : \nPlease use , (comme) to seperate period");
-        double superheroHeight = sc.nextDouble();
+        System.out.println("Write the height of the superhero and what value you want it to be");
+        String superheroHeight = sc.nextLine();
         System.out.println("");
 
         System.out.println("Write the power(s) of the superhero: ");
@@ -135,13 +135,7 @@ public class Database {
         System.out.println("Currently editing superhero height: " + editSuperhero.getSuperheroHeight());
         String superheroNewHeight = sc.nextLine();
         if (!superheroNewHeight.isEmpty())
-        {
-            editSuperhero.setSuperheroHeight(Double.parseDouble(superheroNewHeight));
-        }
-        else
-        {
-            editSuperhero.setSuperheroPower(editSuperhero.getSuperheroPower());
-        }
+            editSuperhero.setSuperheroHeight(superheroNewHeight);
 
         System.out.println("Edit data and press ENTER. If you do not wish to edit any data press ENTER");
         System.out.println("Corrently editing superhero powers: " + editSuperhero.getSuperheroPower());

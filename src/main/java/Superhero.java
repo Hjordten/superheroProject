@@ -1,14 +1,14 @@
 import java.util.Scanner;
 public class Superhero {
     private String superheroName;
-    private double superheroHeight;
+    private String superheroHeight;
     private String superheroPower;
     private String superheroWeakness;
     private boolean superheroHumanOrNot;
 
 
     //Konstruktør
-    public Superhero(String superheroName, double superheroHeight, String superheroPower, String superheroWeakness, boolean superheroHumanOrNot) {
+    public Superhero(String superheroName, String superheroHeight, String superheroPower, String superheroWeakness, boolean superheroHumanOrNot) {
         this.superheroName = superheroName;
         this.superheroHeight = superheroHeight;
         this.superheroPower = superheroPower;
@@ -33,7 +33,7 @@ public class Superhero {
         return superheroName;
     }
 
-    public double getSuperheroHeight() {
+    public String  getSuperheroHeight() {
         return superheroHeight;
     }
 
@@ -55,7 +55,7 @@ public class Superhero {
         this.superheroName = superheroName;
     }
 
-    public void setSuperheroHeight(double superheroHeight) {
+    public void setSuperheroHeight(String superheroHeight) {
         this.superheroHeight = superheroHeight;
     }
 
