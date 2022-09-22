@@ -14,6 +14,7 @@ public class Startprogram {
                     3. Show database of heroes.
                     4. Show previous searches
                     5. Edit superheroes.
+                    6. Remove superhero
                     9. Exit
                     """);
 
@@ -36,6 +37,9 @@ public class Startprogram {
                     case 5:
                         database.editSuperheroes();
                         System.out.println("Please type the number of which hero you wanna edit");
+                        break;
+                    case 6:
+                        database.removeSuperhero();
                         break;
                     case 9:
                         System.out.println("Closing database");

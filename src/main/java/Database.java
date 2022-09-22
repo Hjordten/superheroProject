@@ -25,10 +25,6 @@ public class Database {
         superheroesDatabase.add(new Superhero(superHeroName, superheroHeight, superheroPower, superheroWeakness, humanOrNot));
     }
 
-    public void showDatabse() {
-        System.out.println(superheroesDatabase.get(0));
-    }
-
 
     public void addHeroToDatabase() {
         sc = new Scanner(System.in);
@@ -172,6 +168,20 @@ public class Database {
             System.out.println("");
         }
 
+
+    }
+
+
+    public void removeSuperhero (){
+        for (int i = 0; i < superheroesDatabase.size(); i++) {
+            System.out.println(i + 1 + ":" + superheroesDatabase.get(i));
+        }
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter the number of which superhero you wanna remove: ");
+
+        Superhero superheroRemove = superheroesDatabase.remove(number -1);
     }
 
 }
