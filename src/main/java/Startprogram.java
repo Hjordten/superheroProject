@@ -32,11 +32,9 @@ public class Startprogram {
                         break;
                     case 4:
                         database.showSearchResults();
-                        System.out.println("You have previously searched for these superheroes: ");
                         break;
                     case 5:
                         database.editSuperheroes();
-                        System.out.println("Please type the number of which hero you wanna edit");
                         break;
                     case 6:
                         database.removeSuperhero();
@@ -50,7 +48,7 @@ public class Startprogram {
                         break;
                 }
             } catch (InputMismatchException e) {
-                System.out.println("please enter a number");
+                System.out.println("please enter a valid number from the list.");
             }
         }
     }
